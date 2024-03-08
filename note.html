@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- PushAlert -->
+    <script type="text/javascript">
+        (function (d, t) {
+            var g = d.createElement(t),
+                s = d.getElementsByTagName(t)[0];
+            g.src = "https://cdn.pushalert.co/integrate_ecc3801a26a89c3016ae0535c07eef26.js";
+            s.parentNode.insertBefore(g, s);
+        }(document, "script"));
+    </script>
+    <!-- End PushAlert -->
+</head>
+
+<body>
+    <button onclick="PushAlertCo.forceSubscribe()">Subscribe</button>
+</body>
+<script>
+    (pushalertbyiw = window.pushalertbyiw || []).push(['onReady', onPAReady]);
+
+    function onPAReady() {
+        console.log(PushAlertCo.forceSubscribe()); //This will bring up the subscription opt-in, if it is not blocked. If blocked, it will show steps to unblock notifications.
+    }
+</script>
+
+</html>
