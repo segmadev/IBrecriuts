@@ -1,4 +1,4 @@
-# InfyJobs
+# JOB LISTING WEB APP
 
 
 ### Process to setup project : 
