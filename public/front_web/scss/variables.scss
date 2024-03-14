@@ -1,6 +1,7 @@
 
 //colors
-$red: #F94A4A !default;
+$blue: #0a0af7;
+$red: #0a0af7 !default;
 $black:#272727!default;
 $cyan:#E8F4F3!default;
 $gray:#888E8D!default;
@@ -10,7 +11,7 @@ $gray-300:#DAE0DF!default;
 $success: #198754 !default;
 
 //theme color variable
-$primary: $red!default;
+$primary: $blue!default;
 $secondary: $black!default;
 $bg-light: $cyan!default;
 $bg-dark: $black!default;

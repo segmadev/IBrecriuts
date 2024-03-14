@@ -112,13 +112,11 @@
 
     </a>
 </li>
-<li class="nav-item {{ Request::is('admin/testimonials*','admin/branding-sliders*','admin/header-sliders*','admin/image-sliders*') ? 'active' : '' }}">
-    <a class="nav-link d-flex align-items-center py-3" aria-current="page" href="{{ route('testimonials.index') }}">
+<li class="nav-item {{ Request::is('admin/services*', 'admin/testimonials*','admin/branding-sliders*','admin/header-sliders*','admin/image-sliders*') ? 'active' : '' }}">
+    <a class="nav-link d-flex align-items-center py-3" aria-current="page" href="{{ route('services.index') }}">
         <span class="aside-menu-icon pe-3"><i class="fas fa-sticky-note"></i></span>
         <span class="aside-menu-title">{{ __('messages.cms_sliders') }}</span>
         <span class="d-none">{{ __('messages.testimonials') }}</span>
-        <span class="d-none">{{ __('messages.branding_sliders') }}</span>
-        <span class="d-none">{{ __('messages.header_sliders') }}</span>
         <span class="d-none">{{ __('messages.image_sliders') }}</span>
 
     </a>

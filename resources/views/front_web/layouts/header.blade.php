@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-1 col-4">
-                <a href="{{url('/')}}" class="header-logo">
+                <a href="{{url('/')}}" class="">
                     <img src="{{asset($settings['logo'])}}" alt="Jobs" class="img-fluid"/>
                 </a>
             </div>

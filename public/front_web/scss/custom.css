@@ -11,7 +11,7 @@
 }
 
 .bg-primary {
-  background-color: #F94A4A !important;
+  background-color: #0a0af7 !important;
 }
 
 .text-gray {
@@ -19,7 +19,7 @@
 }
 
 .text-primary, .primary-link-hover:hover, .text-hover-primary:hover {
-  color: #F94A4A !important;
+  color: #0a0af7 !important;
 }
 
 .text-secondary {
@@ -43,13 +43,13 @@
 
 .btn-primary {
   color: #FFFFFF;
-  background-color: #F94A4A;
-  border: 1px solid #F94A4A !important;
+  background-color: #0a0af7;
+  border: 1px solid #0a0af7 !important;
 }
 
 .btn-primary:hover, .btn-primary:active, .btn-primary:focus {
   background-color: #FFFFFF;
-  color: #F94A4A;
+  color: #0a0af7;
 }
 
 .btn-secondary {
@@ -409,7 +409,7 @@ h4 {
   display: block;
   width: 80px;
   height: 5px;
-  background-color: #F94A4A;
+  background-color: #0a0af7;
   top: 50%;
   position: absolute;
   border-radius: 3px;
@@ -460,7 +460,7 @@ h4 {
 }
 
 .latest-job-section .job-card .text, .featured-job-section .job-card .text, .our-latest-jobs .job-card .text {
-  background-color: #f94a4a1f;
+  background-color: #0a0af71f;
   padding: 5px ;
   border-radius: 5px;
 }
@@ -566,7 +566,7 @@ h4 {
 }
 
 .select2-container--default .select2-search--dropdown .select2-search__field:focus {
-    border-color: #F94A4A;
+    border-color: #0a0af7;
 }
 
 .select2-container--default .select2-results__option[aria-selected=true] {
@@ -574,7 +574,7 @@ h4 {
 }
 
 .select2-results__option.select2-results__option--highlighted {
-    background-color: #F94A4A !important;
+    background-color: #0a0af7 !important;
 }
 
 .select2-results__option {
@@ -729,8 +729,8 @@ h4 {
 
 .pagination .page-item .page-link.active, .pagination .page-item .page-link:focus, .pagination .page-item .page-link:hover {
     color: #FFFFFF !important;
-    background-color: #F94A4A;
-    border: 1px solid #F94A4A;
+    background-color: #0a0af7;
+    border: 1px solid #0a0af7;
 }
 
 .pagination .page-item .page-link.previous, .pagination .page-item .page-link.next {

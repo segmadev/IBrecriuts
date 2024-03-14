@@ -44,7 +44,7 @@
 }
 
 .question-section .accordion-button:not(.collapsed) {
-  color: #F94A4A;
+  color: #0a0af7;
   background-color: #FFFFFF;
   -webkit-box-shadow: none !important;
           box-shadow: none !important;

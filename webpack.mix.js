@@ -97,6 +97,7 @@ mix.js([
     'resources/assets/js/candidates/candidate-profile/candidate_career_informations.js',
     'resources/assets/js/candidates/candidate-profile/candidate-general.js',
     'resources/assets/js/testimonial/testimonial.js',
+    'resources/assets/js/services/services.js',
     'resources/assets/js/candidate/favourite_jobs.js',
     'resources/assets/js/jobs/reported_jobs.js',
     'resources/assets/js/companies/front/company-details.js',

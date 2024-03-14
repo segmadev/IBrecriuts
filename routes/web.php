@@ -42,6 +42,7 @@ use App\Http\Controllers\PrivacyPolicyController;
 use App\Http\Controllers\RequiredDegreeLevelController;
 use App\Http\Controllers\SalaryCurrencyController;
 use App\Http\Controllers\SalaryPeriodController;
+use App\Http\Controllers\ServicesController;
 use App\Http\Controllers\SettingController;
 use App\Http\Controllers\SkillController;
 use App\Http\Controllers\StateController;
@@ -53,6 +54,7 @@ use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\TranslationManagerController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\Web;
+use App\Http\Livewire\Services;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -332,6 +334,14 @@ Route::middleware('auth', 'role:Admin', 'xss', 'verified.user')->prefix('admin')
     Route::post('candidates/{candidate}/verify-email',
         [CandidateController::class, 'changeIsEmailVerified'])->name('candidate.changeIsEmailVerified');
     Route::post('candidates/{candidate}/resend-email-verification', [CandidateController::class, 'resendEmailVerification'])->name('candidate.resendEmailVerification');
+   
+    // services routes
+    Route::get('services', [ServicesController::class, 'index'])->name('services.index');
+    Route::post('services', [ServicesController::class, 'store'])->name('services.store');
+    Route::get('services/{services}', [ServicesController::class, 'show'])->name('services.show');
+    Route::post('services/{services}/update', [ServicesController::class, 'update'])->name('services.update');
+    Route::get('services/{services}/edit', [ServicesController::class, 'edit'])->name('services.edit');
+    Route::delete('services/{services}', [ServicesController::class, 'destroy'])->name('services.destroy');
 
     //Testimonials  routes
     Route::get('testimonials', [TestimonialsController::class, 'index'])->name('testimonials.index');
@@ -391,6 +401,7 @@ Route::middleware('auth', 'role:Admin', 'xss', 'verified.user')->prefix('admin')
     Route::get('cms-about-us', [CmsServicesController::class, 'aboutUsService'])->name('cms.about-us.service');
     Route::post('cms-services', [CmsServicesController::class, 'update'])->name('cms.services.update');
     Route::post('cms-about-us', [CmsServicesController::class, 'aboutUsUpdate'])->name('cms.about-us.update');
+    
     // FAQ routes
     Route::get('faqs', [FAQController::class, 'index'])->name('faqs.index');
     Route::post('faqs', [FAQController::class, 'store'])->name('faqs.store');

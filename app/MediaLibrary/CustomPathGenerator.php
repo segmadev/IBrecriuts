@@ -9,6 +9,7 @@ use App\Models\HeaderSlider;
 use App\Models\ImageSlider;
 use App\Models\JobCategory;
 use App\Models\Post;
+use App\Models\Services;
 use App\Models\Setting;
 use App\Models\Testimonial;
 use App\Models\User;
@@ -31,6 +32,8 @@ class CustomPathGenerator implements PathGenerator
                 return str_replace('{PARENT_DIR}', Candidate::RESUME_PATH, $path);
             case Testimonial::PATH:
                 return str_replace('{PARENT_DIR}', 'testimonials', $path);
+            case Services::PATH:
+                return str_replace('{PARENT_DIR}', 'services', $path);
             case User::PROFILE:
                 return str_replace('{PARENT_DIR}', 'profile-pictures', $path);
             case Post::PATH:

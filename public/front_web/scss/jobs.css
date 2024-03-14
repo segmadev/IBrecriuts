@@ -1,6 +1,6 @@
 .latest-job-section .latest-job-left .form-group .form-check-input:checked, .latest-job-section .latest-job-left .form-group .form-check-input:active {
-  background-color: #F94A4A;
-  border-color: #F94A4A;
+  background-color: #0a0af7;
+  border-color: #0a0af7;
   -webkit-box-shadow: none !important;
           box-shadow: none !important;
 }
@@ -12,7 +12,7 @@
 }
 
 .latest-job-section .latest-job-left .form-group .form-check-input:checked {
-  background-color: #F94A4A;
+  background-color: #0a0af7;
 }
 
 .latest-job-section .latest-job-left .form-group .form-check-input:focus {
@@ -42,7 +42,7 @@
 }
 
 .irs--flat .irs-single {
-  color: #F94A4A;
+  color: #0a0af7;
   font-size: 14px;
   text-shadow: none;
   padding: 5px 10px;
@@ -71,7 +71,7 @@
   width: 16px;
   height: 16px;
   border-radius: 50px;
-  background-color: #F94A4A;
+  background-color: #0a0af7;
 }
 
 .irs--flat .irs-single:before {

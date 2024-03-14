@@ -11,7 +11,7 @@
 }
 
 .bg-primary {
-  background-color: #F94A4A !important;
+  background-color: #0a0af7 !important;
 }
 
 .text-gray {
@@ -19,7 +19,7 @@
 }
 
 .text-primary, .primary-link-hover:hover, .text-hover-primary:hover {
-  color: #F94A4A !important;
+  color: #0a0af7 !important;
 }
 
 .text-secondary {
@@ -43,13 +43,13 @@
 
 .btn-primary {
   color: #FFFFFF;
-  background-color: #F94A4A;
-  border: 1px solid #F94A4A !important;
+  background-color: #0a0af7;
+  border: 1px solid #0a0af7 !important;
 }
 
 .btn-primary:hover, .btn-primary:active, .btn-primary:focus {
   background-color: #FFFFFF;
-  color: #F94A4A;
+  color: #0a0af7;
 }
 
 .btn-secondary {
@@ -409,7 +409,7 @@ h4 {
   display: block;
   width: 80px;
   height: 5px;
-  background-color: #F94A4A;
+  background-color: #0a0af7;
   top: 50%;
   position: absolute;
   border-radius: 3px;
@@ -460,7 +460,7 @@ h4 {
 }
 
 .latest-job-section .job-card .text, .featured-job-section .job-card .text, .our-latest-jobs .job-card .text {
-  background-color: #f94a4a1f;
+  background-color: #0a0af71f;
   padding: 5px ;
   border-radius: 5px;
 }
@@ -566,7 +566,7 @@ h4 {
 }
 
 .select2-container--default .select2-search--dropdown .select2-search__field:focus {
-    border-color: #F94A4A;
+    border-color: #0a0af7;
 }
 
 .select2-container--default .select2-results__option[aria-selected=true] {
@@ -574,7 +574,7 @@ h4 {
 }
 
 .select2-results__option.select2-results__option--highlighted {
-    background-color: #F94A4A !important;
+    background-color: #0a0af7 !important;
 }
 
 .select2-results__option {
@@ -729,8 +729,8 @@ h4 {
 
 .pagination .page-item .page-link.active, .pagination .page-item .page-link:focus, .pagination .page-item .page-link:hover {
     color: #FFFFFF !important;
-    background-color: #F94A4A;
-    border: 1px solid #F94A4A;
+    background-color: #0a0af7;
+    border: 1px solid #0a0af7;
 }
 
 .pagination .page-item .page-link.previous, .pagination .page-item .page-link.next {
@@ -1025,7 +1025,7 @@ footer .email .icon {
     position: absolute;
     right: 30px;
     top: 30px;
-    color: #f94a4a;
+    color: rgb(19 206 102);
 }
 .job-post-wrapper ul.pagination {
     margin-top: 30px !important;
@@ -1096,7 +1096,7 @@ footer .email .icon {
 
 .job-search li:hover {
     cursor: pointer;
-    border-bottom: 2px solid #f94a4a;
+    border-bottom: 2px solid rgb(19 206 102);
 }
 
 .job-search-dropdown {
@@ -1169,8 +1169,8 @@ footer .email .icon {
     box-shadow: none !important;
 }
 .desc .jobs-position{
-    background-color: #ff00000f;
-    color: #FF5B5C;
+    background-color: #00ff260f;
+    color: rgb(19 206 102);
     padding: 5px;
     width: 100%;
     display: flex;
@@ -1211,7 +1211,7 @@ footer .email .icon {
     color: #888e8d !important;
 }
 .related-jobs{
-    background-color: #f94a4a1f;
+    background-color: rgb(19 206 102)1f;
     padding: 5px;
     border-radius: 5px;
 }
@@ -1230,7 +1230,7 @@ footer .email .icon {
     height:72px;
     min-width: 72px;
     margin-right:16px;
-    background-color: #ff00000f;
+    background-color: #00ff260f;
     border-radius: 4px;
     i {
         font-size:40px !important;
@@ -1243,7 +1243,7 @@ footer .email .icon {
 }
 
 .card-img  .svg-inline--fa {
-    color: #FF5B5C;
+    color: rgb(19 206 102);
     font-size:40px !important;
 }
 .card-text h3 {
@@ -1257,11 +1257,11 @@ footer .email .icon {
 }
 .input-icon {
     font-size:24px;
-    color: #FF5B5C;
+    color: rgb(19 206 102);
 }
 .border-left-color{
     border: none;
-    border-left: 4px solid #F94A4A;
+    border-left: 4px solid rgb(19 206 102);
 }
 .recent-post-img{
     width: 100px;
@@ -1275,7 +1275,7 @@ footer .email .icon {
     top: 16px;
     left: 265px;
     font-size: 13px;
-    color: #FF5B5C;
+    color: rgb(19 206 102);
     padding: 0 5px;
 }
 
@@ -1592,7 +1592,7 @@ footer .email .icon {
 }
 
 .testimonial-section li.slick-active {
-  background-color: #F94A4A;
+  background-color: #0a0af7;
   border: 0;
   width: 20px;
   border-radius: 10px;
@@ -1758,7 +1758,7 @@ footer .email .icon {
 }
 
 .question-section .accordion-button:not(.collapsed) {
-  color: #F94A4A;
+  color: #0a0af7;
   background-color: #FFFFFF;
   -webkit-box-shadow: none !important;
           box-shadow: none !important;
@@ -1827,7 +1827,7 @@ footer .email .icon {
 
 .blog-detail-section .comments .comment-card {
   border: none;
-  border-left: 4px solid #F94A4A;
+  border-left: 4px solid #0a0af7;
 }
 
 .blog-detail-section .comments .comment-card .card-img {
@@ -1915,8 +1915,8 @@ footer .email .icon {
 }
 
 .latest-job-section .latest-job-left .form-group .form-check-input:checked, .latest-job-section .latest-job-left .form-group .form-check-input:active {
-  background-color: #F94A4A;
-  border-color: #F94A4A;
+  background-color: #0a0af7;
+  border-color: #0a0af7;
   -webkit-box-shadow: none !important;
           box-shadow: none !important;
 }
@@ -1928,7 +1928,7 @@ footer .email .icon {
 }
 
 .latest-job-section .latest-job-left .form-group .form-check-input:checked {
-  background-color: #F94A4A;
+  background-color: #0a0af7;
 }
 
 .latest-job-section .latest-job-left .form-group .form-check-input:focus {
@@ -1958,7 +1958,7 @@ footer .email .icon {
 }
 
 .irs--flat .irs-single {
-  color: #F94A4A;
+  color: #0a0af7;
   font-size: 14px;
   text-shadow: none;
   padding: 5px 10px;
@@ -1987,7 +1987,7 @@ footer .email .icon {
   width: 16px;
   height: 16px;
   border-radius: 50px;
-  background-color: #F94A4A;
+  background-color: #0a0af7;
 }
 
 .irs--flat .irs-single:before {

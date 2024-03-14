@@ -2,7 +2,7 @@
     position: absolute;
     right: 30px;
     top: 30px;
-    color: #f94a4a;
+    color: rgb(19 206 102);
 }
 .job-post-wrapper ul.pagination {
     margin-top: 30px !important;
@@ -73,7 +73,7 @@
 
 .job-search li:hover {
     cursor: pointer;
-    border-bottom: 2px solid #f94a4a;
+    border-bottom: 2px solid rgb(19 206 102);
 }
 
 .job-search-dropdown {
@@ -146,8 +146,8 @@
     box-shadow: none !important;
 }
 .desc .jobs-position{
-    background-color: #ff00000f;
-    color: #FF5B5C;
+    background-color: #00ff260f;
+    color: rgb(19 206 102);
     padding: 5px;
     width: 100%;
     display: flex;
@@ -188,7 +188,7 @@
     color: #888e8d !important;
 }
 .related-jobs{
-    background-color: #f94a4a1f;
+    background-color: rgb(19 206 102)1f;
     padding: 5px;
     border-radius: 5px;
 }
@@ -207,7 +207,7 @@
     height:72px;
     min-width: 72px;
     margin-right:16px;
-    background-color: #ff00000f;
+    background-color: #00ff260f;
     border-radius: 4px;
     i {
         font-size:40px !important;
@@ -220,7 +220,7 @@
 }
 
 .card-img  .svg-inline--fa {
-    color: #FF5B5C;
+    color: rgb(19 206 102);
     font-size:40px !important;
 }
 .card-text h3 {
@@ -234,11 +234,11 @@
 }
 .input-icon {
     font-size:24px;
-    color: #FF5B5C;
+    color: rgb(19 206 102);
 }
 .border-left-color{
     border: none;
-    border-left: 4px solid #F94A4A;
+    border-left: 4px solid rgb(19 206 102);
 }
 .recent-post-img{
     width: 100px;
@@ -252,7 +252,7 @@
     top: 16px;
     left: 265px;
     font-size: 13px;
-    color: #FF5B5C;
+    color: rgb(19 206 102);
     padding: 0 5px;
 }
 

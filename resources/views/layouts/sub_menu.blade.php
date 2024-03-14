@@ -216,19 +216,23 @@
     </ul>
 </li>
 </div>
-<li class="nav-item position-relative mx-xl-3 mb-3 mb-xl-0 {{ !Request::is('admin/testimonials*','admin/branding-sliders*','admin/header-sliders*','admin/image-sliders*') ? 'd-none' : '' }}">
+<li class="nav-item position-relative mx-xl-3 mb-3 mb-xl-0 {{ !Request::is('admin/services*','admin/testimonials*','admin/branding-sliders*','admin/header-sliders*','admin/image-sliders*') ? 'd-none' : '' }}">
+    <a class="nav-link p-0 {{ Request::is('admin/services*') ? 'active' : '' }}"
+       href="{{ route('services.index') }}">{{ __('messages.service') }}</a>
+</li>
+<li class="nav-item position-relative mx-xl-3 mb-3 mb-xl-0 {{ !Request::is('admin/services*','admin/testimonials*','admin/branding-sliders*','admin/header-sliders*','admin/image-sliders*') ? 'd-none' : '' }}">
     <a class="nav-link p-0 {{ Request::is('admin/testimonials*') ? 'active' : '' }}"
        href="{{ route('testimonials.index') }}">{{ __('messages.testimonials') }}</a>
 </li>
-<li class="nav-item position-relative mx-xl-3 mb-3 mb-xl-0 {{ !Request::is('admin/testimonials*','admin/branding-sliders*','admin/header-sliders*','admin/image-sliders*') ? 'd-none' : '' }}">
+<!-- <li class="nav-item position-relative mx-xl-3 mb-3 mb-xl-0 {{ !Request::is('admin/services*', 'admin/testimonials*','admin/branding-sliders*','admin/header-sliders*','admin/image-sliders*') ? 'd-none' : '' }}">
     <a class="nav-link p-0 {{ Request::is('admin/branding-sliders*') ? 'active' : '' }}"
        href="{{ route('branding.sliders.index') }}">{{ __('messages.branding_sliders') }}</a>
 </li>
-<li class="nav-item position-relative mx-xl-3 mb-3 mb-xl-0 {{ !Request::is('admin/testimonials*','admin/branding-sliders*','admin/header-sliders*','admin/image-sliders*') ? 'd-none' : '' }}">
+<li class="nav-item position-relative mx-xl-3 mb-3 mb-xl-0 {{ !Request::is('admin/services*', 'admin/testimonials*','admin/branding-sliders*','admin/header-sliders*','admin/image-sliders*') ? 'd-none' : '' }}">
     <a class="nav-link p-0 {{ Request::is('admin/header-sliders*') ? 'active' : '' }}"
        href="{{ route('header.sliders.index') }}">{{ __('messages.header_sliders') }}</a>
-</li>
-<li class="nav-item position-relative mx-xl-3 mb-3 mb-xl-0 {{ !Request::is('admin/testimonials*','admin/branding-sliders*','admin/header-sliders*','admin/image-sliders*') ? 'd-none' : '' }}">
+</li> -->
+<li class="nav-item position-relative mx-xl-3 mb-3 mb-xl-0 {{ !Request::is('admin/services*', 'admin/testimonials*','admin/branding-sliders*','admin/header-sliders*','admin/image-sliders*') ? 'd-none' : '' }}">
     <a class="nav-link p-0 {{ Request::is('admin/image-sliders*') ? 'active' : '' }}"
        href="{{ route('image-sliders.index') }}">{{ __('messages.image_sliders') }}</a>
 </li>

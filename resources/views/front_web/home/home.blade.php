@@ -36,7 +36,7 @@
                                             <form action="{{ route('front.search.jobs') }}" id='searchForm' method="get">
                                                 <div class="row align-items-center justify-content-around px-3">
                                                     <div class="col-lg-5 br-2 mb-lg-0 mb-2 pb-3 ps-lg-4 d-flex input-text mt-3">
-                                                        <i class="fa-solid fa-magnifying-glass input-icon me-2"></i>
+                                                        <i class="fa-solid fa-magnifying-glass input-icon me-2 text-primary"></i>
                                                         <input type="text" class="fs-14 text-gray mb-0 input" name="keywords"
                                                                id="search-keywords"
                                                                placeholder="@lang('web.web_home.job_title_keywords_company')"
@@ -44,13 +44,13 @@
                                                         <div id="jobsSearchResults" class="position-absolute w100 job-search"></div>
                                                     </div>
                                                     <div class="col-lg-4 br-2 ps-lg-3 mb-lg-0 mb-2 pb-3 ps-lg-4 d-flex input-text mt-3">
-                                                        <i class="fa-solid fa-location-dot input-icon me-2"></i>
+                                                        <i class="fa-solid fa-location-dot input-icon me-2 text-primary"></i>
                                                         <input type="text" class="fs-14 text-gray mb-0 input" name="location"
                                                                id="search-location" placeholder="@lang('web.web_home.city_or_postcode')"
                                                                autocomplete="off">
                                                     </div>
                                                     <div class="col-lg-3 text-center">
-                                                        <button class="btn btn-primary d-block find-jobs-btn" type="submit">
+                                                        <button class="btn btn-success d-block find-jobs-btn" type="submit">
                                                             @lang('web.web_home.find_jobs')
                                                         </button>
                                                     </div>
@@ -123,40 +123,7 @@
         @endif
     <!-- end-companies-logo section -->
 
-        <!-- start-slider-test-img section -->
-        @if(count($imageSliders) > 0 && $imageSliderActive->value)
-            <section class="{{ ($slider->value == 0) ? 'container' : ' ' }} slider-test-section position-relative">
-                <div id="carouselExampleControls" class="carousel slide"
-                     data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        @foreach($imageSliders as $key=>$imageSlider)
-                            <div class="carousel-item position-relative {{($key==0)?'active':''}}">
-                                <img src="{{$imageSlider->image_slider_url}}" class="d-block w-100 slider-img"
-                                     alt="slide">
-                                @if($imageSlider->description)
-                                    <div class="row justify-content-center">
-                                        <div class="slider-img-desc col-10 text-center position-absolute">
-                                            <div class="slide-desc">
-                                                {!! Str::limit($imageSlider->description, 495, ' ...') !!}
-                                            </div>
-                                        </div>
-                                    </div>
-                                @endif
-                            </div>
-                        @endforeach
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-                            data-bs-slide="prev">
-                        <i class="icon fa-solid fa-arrow-left text-white"></i>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-                            data-bs-slide="next">
-                        <i class="icon fa-solid fa-arrow-right text-white"></i>
-                    </button>
-                </div>
-            </section>
-        @endif
-    <!-- end-slider-test-img section -->
+     
 
         <!-- start-popular-job-categories-section -->
         @if(count($jobCategories) > 0)
@@ -455,13 +422,13 @@
     <!-- end blog-section -->
 
         <!-- start-about-section -->
-        <section class="about-section py-60 bg-secondary">
+        <section class="about-section py-60 bg-success">
             <div class="container">
                 <div class="row justify-content-between align-items-center">
                     
                     <div class="col-sm-3 col-6 text-center mb-sm-0 mb-4">
                         <div class="about-desc" data-wow-delay="400ms">
-                            <h3 class="text-primary counter" data-duration="3000"
+                            <h3 class="text-light counter" data-duration="3000"
                                 data-count="{{ $dataCounts['jobs'] }}"></h3>
                             <p class="text-white fs-18 mb-0">
                                 @lang('messages.front_home.jobs')</p>
@@ -469,7 +436,7 @@
                     </div>
                     <div class="col-sm-3 col-6 text-center">
                         <div class="about-desc" data-wow-delay="800ms">
-                            <h3 class="text-primary counter" data-duration="3000"
+                            <h3 class="text-light counter" data-duration="3000"
                                 data-count="{{ $dataCounts['resumes'] }}"></h3>
                             <p class="text-white fs-18 mb-0">
                                 @lang('messages.front_home.resumes')</p>
@@ -477,7 +444,7 @@
                     </div>
                     <div class="col-sm-3 col-6 text-center">
                         <div class="about-desc" data-wow-delay="800ms">
-                            <h3 class="text-primary counter" data-count="{{ $dataCounts['companies'] }}"
+                            <h3 class="text-light counter" data-count="{{ $dataCounts['companies'] }}"
                                 data-duration="3000"></h3>
                             <p class="text-white fs-18 mb-0">
                                 @lang('messages.front_home.companies')</p>
@@ -489,36 +456,7 @@
         <!-- end-about-section -->
 
         <!-- start pricing-packages-section -->
-        @if(count($plans) > 0)
-            <section class="pricing-packages-section py-50">
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-12">
-                            <div class="section-heading text-center">
-                                <h2 class="text-secondary bg-white ms-xl-5 me-xl-4"> @lang('web.web_home.pricing_packages') </h2>
-                            </div>
-                        </div>
-                    </div>
-                    <section class="slider-test-section position-relative">
-                        <div id="carouselExampleControl" class="carousel slide"
-                             data-bs-ride="carousel">
-                            <div class="carousel-inner">
-                                
-                            </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControl"
-                                    data-bs-slide="prev">
-                                <i class="icon fa-solid fa-arrow-left text-danger border-danger"></i>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControl"
-                                    data-bs-slide="next">
-                                <i class="icon fa-solid fa-arrow-right text-danger border-danger"></i>
-                            </button>
-                        </div>
-
-                    </section>
-                </div>
-            </section>
-    @endif
+      
     {{Form::hidden('homeData',json_encode(getCountries()),['id'=>'indexHomeData'])}}
     <!-- end pricing-packages-section -->
     </div>
