@@ -14,10 +14,7 @@
   -webkit-overflow-scrolling: touch;
 }
 
-.notification,
-.dark-background,
-.candidate-education,
-.candidate-experience {
+.notification, .dark-background, .candidate-education, .candidate-experience {
   /*background: #ADB5BD;*/
   background: #262832 !important;
 }
@@ -53,9 +50,6 @@
   background: #1b1b29 !important;
 }
 
-.flatpickr-months .flatpickr-next-month:hover,
-.flatpickr-months .flatpickr-prev-month:hover {
+.flatpickr-months .flatpickr-next-month:hover, .flatpickr-months .flatpickr-prev-month:hover {
   background: #1b1b29 !important;
 }
-
-

@@ -10,19 +10,19 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "PageRenderer": () => (/* binding */ PageRenderer),
-/* harmony export */   "PageSnapshot": () => (/* binding */ PageSnapshot),
-/* harmony export */   "clearCache": () => (/* binding */ clearCache),
-/* harmony export */   "connectStreamSource": () => (/* binding */ connectStreamSource),
-/* harmony export */   "disconnectStreamSource": () => (/* binding */ disconnectStreamSource),
-/* harmony export */   "navigator": () => (/* binding */ navigator$1),
-/* harmony export */   "registerAdapter": () => (/* binding */ registerAdapter),
-/* harmony export */   "renderStreamMessage": () => (/* binding */ renderStreamMessage),
-/* harmony export */   "session": () => (/* binding */ session),
-/* harmony export */   "setConfirmMethod": () => (/* binding */ setConfirmMethod),
-/* harmony export */   "setProgressBarDelay": () => (/* binding */ setProgressBarDelay),
-/* harmony export */   "start": () => (/* binding */ start),
-/* harmony export */   "visit": () => (/* binding */ visit)
+/* harmony export */   PageRenderer: () => (/* binding */ PageRenderer),
+/* harmony export */   PageSnapshot: () => (/* binding */ PageSnapshot),
+/* harmony export */   clearCache: () => (/* binding */ clearCache),
+/* harmony export */   connectStreamSource: () => (/* binding */ connectStreamSource),
+/* harmony export */   disconnectStreamSource: () => (/* binding */ disconnectStreamSource),
+/* harmony export */   navigator: () => (/* binding */ navigator$1),
+/* harmony export */   registerAdapter: () => (/* binding */ registerAdapter),
+/* harmony export */   renderStreamMessage: () => (/* binding */ renderStreamMessage),
+/* harmony export */   session: () => (/* binding */ session),
+/* harmony export */   setConfirmMethod: () => (/* binding */ setConfirmMethod),
+/* harmony export */   setProgressBarDelay: () => (/* binding */ setProgressBarDelay),
+/* harmony export */   start: () => (/* binding */ start),
+/* harmony export */   visit: () => (/* binding */ visit)
 /* harmony export */ });
 /*
 Turbo 7.1.0
@@ -3425,7 +3425,7 @@ start();
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be in strict mode.
+// This entry needs to be wrapped in an IIFE because it needs to be in strict mode.
 (() => {
 "use strict";
 var __webpack_exports__ = {};
@@ -3443,7 +3443,7 @@ _hotwired_turbo__WEBPACK_IMPORTED_MODULE_0__.start();
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_hotwired_turbo__WEBPACK_IMPORTED_MODULE_0__);
 })();
 
-// This entry need to be wrapped in an IIFE because it need to be isolated against other entry modules.
+// This entry needs to be wrapped in an IIFE because it needs to be isolated against other entry modules.
 (() => {
 /*!***********************************************!*\
   !*** ./resources/assets/js/custom/helpers.js ***!
@@ -3451,42 +3451,33 @@ _hotwired_turbo__WEBPACK_IMPORTED_MODULE_0__.start();
 window.listen = function (event, selector, callback) {
   $(document).on(event, selector, callback);
 };
-
 window.listenClick = function (selector, callback) {
   $(document).on('click', selector, callback);
 };
-
 window.listenSubmit = function (selector, callback) {
   $(document).on('submit', selector, callback);
 };
-
 window.listenHiddenBsModal = function (selector, callback) {
   $(document).on('hidden.bs.modal', selector, callback);
 };
-
 window.listenShowBsModal = function (selector, callback) {
   $(document).on('show.bs.modal', selector, callback);
 };
-
 window.listenChange = function (selector, callback) {
   $(document).on('change', selector, callback);
 };
-
 window.listenKeyup = function (selector, callback) {
   $(document).on('keyup', selector, callback);
 };
-
 window.listenWithOutTarget = function (event, callback) {
   $(document).on(event, callback);
 };
-
 window.IOInitImageComponent = function () {
   var imagePicker = document.querySelectorAll('.image-picker'); // if not found the image-picker object its return
 
   if (!imagePicker) {
     return;
   }
-
   for (var i = 0; i < imagePicker.length; i++) {
     var box = imagePicker[i];
     IOInitDropEffect(box);
@@ -3494,13 +3485,11 @@ window.IOInitImageComponent = function () {
   }
 }; // Drop Effect according to the image size
 
-
 function IOInitDropEffect(box) {
   var area, drop, areaWidth, areaHeight, maxDistance, dropWidth, dropHeight, x, y; // get clickable area for drop effect
 
   area = box.querySelector('.previewImage');
   area.addEventListener('click', fireRipple);
-
   function fireRipple(e) {
     area = e.currentTarget; // create drop
 
@@ -3509,7 +3498,6 @@ function IOInitDropEffect(box) {
       drop.className = 'drop';
       this.appendChild(drop);
     } // reset animate class
-
 
     drop.className = 'drop'; // calculate dimensions of area (longest side)
 
@@ -3534,37 +3522,29 @@ function IOInitDropEffect(box) {
   }
 } // File Preview Code End
 
-
 function IOInitImageUpload(box) {
   var uploadField = box.querySelector('.image-upload');
   uploadField.addEventListener('change', getFile);
-
   function getFile(e) {
     var file = e.currentTarget.files[0];
     checkType(file);
   } // Preview Image to given component
 
-
   function previewImage(file) {
     var thumb = box.querySelector('.previewImage'),
-        reader = new FileReader();
-
+      reader = new FileReader();
     reader.onload = function (e) {
       var image = new Image();
       image.src = e.target.result;
-
       image.onload = function () {
         thumb.style.backgroundImage = 'url(' + e.target.result + ')';
       };
     };
-
     reader.readAsDataURL(file);
   } // Check Image Type
 
-
   function checkType(file) {
     var imageType = /image.*/;
-
     if (!file.type.match(imageType)) {
       throw 'File Type is not match.';
     } else if (!file) {
@@ -3574,7 +3554,6 @@ function IOInitImageUpload(box) {
     }
   }
 } // every load initialize the Image component on document load
-
 
 window.IOInitSidebar = function () {
   $('.sidebar-btn').click(function () {
@@ -3615,20 +3594,19 @@ window.IOInitSidebar = function () {
 };
 })();
 
-// This entry need to be wrapped in an IIFE because it need to be isolated against other entry modules.
+// This entry needs to be wrapped in an IIFE because it needs to be isolated against other entry modules.
 (() => {
 /*!******************************************!*\
   !*** ./resources/assets/js/home/home.js ***!
   \******************************************/
 document.addEventListener('turbo:load', loadHomeData);
-
 function loadHomeData() {
   if (!$('#indexHomeData').length) {
     return;
-  } // $('.selectpicker').selectpicker({
+  }
+  // $('.selectpicker').selectpicker({
   //     width: '100%'
   // });
-
 
   $('.search-categories').on('click', function () {
     $('.dropdown-menu').css('z-index', '100');
@@ -3641,12 +3619,12 @@ function loadHomeData() {
   $.each(locationData, function (i, v) {
     availableLocation.push(v);
   });
-
   if ($('#search-location').length) {
     $('#search-location').autocomplete({
       source: availableLocation
     });
-  } // $('.image-slider').owlCarousel({
+  }
+  // $('.image-slider').owlCarousel({
   //     margin: 10,
   //     autoplay: false,
   //     loop: true,
@@ -3706,9 +3684,7 @@ function loadHomeData() {
   //     items: 1,
   // });
 
-
   var windowWidth = $(window).width();
-
   function brandItem() {
     if (windowWidth > 1200) {
       return 6;
@@ -3718,11 +3694,12 @@ function loadHomeData() {
       return 2;
     }
   }
-
   function brandSlider(item) {
     var itemLength = $('#brandingSlider .item:not(.cloned)').length;
     return itemLength > item ? true : false;
-  } // $('#brandingSlider').owlCarousel({
+  }
+
+  // $('#brandingSlider').owlCarousel({
   //     loop: brandSlider(brandItem()),
   //     autoplay: true,
   //     margin: 30,
@@ -3745,7 +3722,6 @@ function loadHomeData() {
   //         },
   //     },
   // });
-
 
   $('.slick-slider').slick({
     dots: false,
@@ -3782,7 +3758,7 @@ function loadHomeData() {
   });
   $(".counter").each(function () {
     var $this = $(this),
-        countTo = $this.attr("data-count");
+      countTo = $this.attr("data-count");
     countDuration = parseInt($this.attr("data-duration"));
     $({
       counter: $this.text()
@@ -3799,14 +3775,12 @@ function loadHomeData() {
       }
     });
   });
-
   if ($(window).width() > 1024) {
     // counting the number of classes named .item
     if ($('#brandingSlider .item').length < 6) {
       $('#brandingSlider.owl-carousel .owl-stage-outer').css('display', 'flex').css('justify-content', 'center');
     }
   }
-
   $('#brandingSlider .item').on('mouseover', function () {
     $(this).closest('.owl-carousel').trigger('stop.owl.autoplay');
   });
@@ -3821,7 +3795,6 @@ function loadHomeData() {
   });
   $('#search-keywords').on('keyup', function () {
     var searchTerm = $(this).val();
-
     if (searchTerm != '') {
       $.ajax({
         url: route('get.jobs.search'),
@@ -3841,8 +3814,9 @@ function loadHomeData() {
   listenClick('#jobsSearchResults ul li', function () {
     $('#search-keywords').val($(this).text());
     $('#jobsSearchResults').fadeOut();
-  }); //Banner Carousel
+  });
 
+  //Banner Carousel
   $('.banner-carousel').slick({
     dots: false,
     autoplay: true,
@@ -3854,32 +3828,30 @@ function loadHomeData() {
 }
 })();
 
-// This entry need to be wrapped in an IIFE because it need to be isolated against other entry modules.
+// This entry needs to be wrapped in an IIFE because it needs to be isolated against other entry modules.
 (() => {
 /*!**************************************************************!*\
   !*** ./resources/assets/js/front_register/front_register.js ***!
   \**************************************************************/
 document.addEventListener('turbo:load', loadFrontRegisterData);
-
 function loadFrontRegisterData() {
   if (!$('#addEmployerNewForm').length && !$('#addCandidateNewForm').length) {
     return;
   }
-
   $('#loginTab a').click(function (e) {
     e.preventDefault();
     $(this).tab('show');
-  }); // store the currently selected tab in the hash value
-
+  });
+  // store the currently selected tab in the hash value
   $('ul.nav-tabs > li > a').on('shown.bs.tab', function (e) {
     var id = $(e.target).attr('href').substr(1);
     window.location.hash = id;
     document.body.scrollTop = 0; // For Safari
-
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-  }); // on load of the page: switch to the currently selected tab
-
-  var hash = window.location.hash; // $('#loginTab a[href="' + hash + '"]').tab('show');
+  });
+  // on load of the page: switch to the currently selected tab
+  var hash = window.location.hash;
+  // $('#loginTab a[href="' + hash + '"]').tab('show');
 
   $('#candidate').on('hidden.bs.tab', function () {
     resetModalForm('#candidateForm', '#candidateValidationErrBox');
@@ -3888,14 +3860,13 @@ function loadFrontRegisterData() {
     resetModalForm('#employeeForm', '#employerValidationErrBox');
   });
 }
-
 listenSubmit('#addCandidateNewForm', function (e) {
-  e.preventDefault(); // if ($('#isGoogleReCaptchaEnabled').val()) {
+  e.preventDefault();
+  // if ($('#isGoogleReCaptchaEnabled').val()) {
   //     if (!checkGoogleReCaptcha(1)) {
   //         return true;
   //     }
   // }
-
   processingBtn('#addCandidateNewForm', '#btnCandidateSave', 'loading');
   $.ajax({
     url: route('front.save.register'),
@@ -3919,7 +3890,8 @@ listenSubmit('#addCandidateNewForm', function (e) {
 });
 listenSubmit('#addEmployerNewForm', function (e) {
   e.preventDefault();
-  processingBtn('#addEmployerNewForm', '#btnEmployerSave', 'loading'); //
+  processingBtn('#addEmployerNewForm', '#btnEmployerSave', 'loading');
+  //
   // if ($('#isGoogleReCaptchaEnabled').val()) {
   //     if (!checkGoogleReCaptcha(2))
   //         return true;
@@ -3947,42 +3919,36 @@ listenSubmit('#addEmployerNewForm', function (e) {
 });
 })();
 
-// This entry need to be wrapped in an IIFE because it need to be isolated against other entry modules.
+// This entry needs to be wrapped in an IIFE because it needs to be isolated against other entry modules.
 (() => {
 /*!****************************************************************!*\
   !*** ./resources/assets/js/front_register/google-recaptcha.js ***!
   \****************************************************************/
 document.addEventListener('turbo:load', loadGoogleRecaptchaData);
-
 function loadGoogleRecaptchaData() {}
-
 window.checkGoogleReCaptcha = function checkGoogleReCaptcha(registerType) {
   var response = grecaptcha.getResponse();
-
   if (response.length == 0) {
     displayErrorMessage(Lang.get('messages.verify_captcha'));
     processingBtn(registerType == 1 ? '#addCandidateNewForm' : '#addEmployerNewForm', registerType == 1 ? '#btnCandidateSave' : '#btnEmployerSave');
     return false;
   }
-
   return true;
 };
 })();
 
-// This entry need to be wrapped in an IIFE because it need to be isolated against other entry modules.
+// This entry needs to be wrapped in an IIFE because it needs to be isolated against other entry modules.
 (() => {
 /*!****************************************************!*\
   !*** ./resources/assets/js/auto_fill/auto_fill.js ***!
   \****************************************************/
 document.addEventListener('turbo:load', loadAutoFieldsData);
-
 function loadAutoFieldsData() {
   window.changeCredentials = function changeCredentials(email, password) {
     $('#email').val(email);
     $('#password').val(password);
   };
 }
-
 listenClick('.admin-login', function () {
   changeCredentials('admin@infyjobs.com', '123456');
 });
@@ -3994,40 +3960,32 @@ listenClick('.employee-login', function () {
 });
 })();
 
-// This entry need to be wrapped in an IIFE because it need to be isolated against other entry modules.
+// This entry needs to be wrapped in an IIFE because it needs to be isolated against other entry modules.
 (() => {
 /*!******************************************************************!*\
   !*** ./resources/assets/js/web/front_settings/front_settings.js ***!
   \******************************************************************/
 document.addEventListener('turbo:load', loadFrontSettings);
-
 function loadFrontSettings() {
   if ($('#advertiseImage').length) {
     $('#currency').select2({
       width: '100%'
     });
   }
-
   listenChange('#advertiseImage', function () {
     $('#validationErrorsBox').addClass('d-none');
-
     if (isValidAdvertise($(this), '#validationErrorsBox')) {
       displayAdvertiseImage(this, '#advertisePreview');
     }
-
     $('#validationErrorsBox').delay(5000).slideUp(300);
   });
-
   function displayAdvertiseImage(input, selector) {
     var displayPreview = true;
-
     if (input.files && input.files[0]) {
       var reader = new FileReader();
-
       reader.onload = function (e) {
         var image = new Image();
         image.src = e.target.result;
-
         image.onload = function () {
           if (image.height != 450 || image.width != 630) {
             $('#advertiseImage').val('');
@@ -4035,48 +3993,38 @@ function loadFrontSettings() {
             $('#validationErrorsBox').html('The image must be of pixel 450 x 630').show();
             return false;
           }
-
           $(selector).attr('src', e.target.result);
           displayPreview = true;
         };
       };
-
       if (displayPreview) {
         reader.readAsDataURL(input.files[0]);
         $(selector).show();
       }
     }
   }
-
   ;
-
   function isValidAdvertise(inputSelector, validationMessageSelector) {
     var ext = $(inputSelector).val().split('.').pop().toLowerCase();
-
     if ($.inArray(ext, ['jpg', 'jpeg', 'png']) == -1) {
       $(inputSelector).val('');
       $(validationMessageSelector).removeClass('d-none');
       $(validationMessageSelector).html('The image must be a file of type: jpg, jpeg, png.').show();
       return false;
     }
-
     $(validationMessageSelector).hide();
     return true;
   }
-
   ;
   listenChange('.featured-job-active', function () {
     var featuredJobId;
-
     if ($(this).prop('checked') == true) {
       featuredJobId = 1;
     } else {
       featuredJobId = 0;
     }
-
     changeFeaturedJob(featuredJobId);
   });
-
   function changeFeaturedJob(featuredJobId) {
     $.ajax({
       url: route('change-is-job-active', featuredJobId),
@@ -4092,20 +4040,16 @@ function loadFrontSettings() {
       }
     });
   }
-
   ;
   listenChange('.featured-company-active', function () {
     var featuredCompanyId;
-
     if ($(this).prop('checked') == true) {
       featuredCompanyId = 1;
     } else {
       featuredCompanyId = 0;
     }
-
     changeFeaturedCompany(featuredCompanyId);
   });
-
   function changeFeaturedCompany(featuredCompanyId) {
     $.ajax({
       url: route('change-is-company-active', featuredCompanyId),
@@ -4121,20 +4065,16 @@ function loadFrontSettings() {
       }
     });
   }
-
   ;
   listenChange('.job-country-active', function () {
     var jobCountryId;
-
     if ($(this).prop('checked') == true) {
       jobCountryId = 1;
     } else {
       jobCountryId = 0;
     }
-
     changeJobCountry(jobCountryId);
   });
-
   function changeJobCountry(jobCountryId) {
     $.ajax({
       url: route('change-is-job-country-active', jobCountryId),
@@ -4150,12 +4090,11 @@ function loadFrontSettings() {
       }
     });
   }
-
   ;
 }
 })();
 
-// This entry need to be wrapped in an IIFE because it need to be isolated against other entry modules.
+// This entry needs to be wrapped in an IIFE because it needs to be isolated against other entry modules.
 (() => {
 /*!***************************************************************!*\
   !*** ./resources/assets/js/web/js/news_letter/news_letter.js ***!
@@ -4165,13 +4104,11 @@ listenSubmit('#newsLetterForm', function (event) {
   var email = $('#mc-email').val();
   var emailExp = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
   var emailCheck = email == '' ? true : emailExp.test(email) ? true : false;
-
   if (!emailCheck) {
     displayErrorMessage('Please enter a valid Email');
     return false;
-  } // loadingButton.button('loading');
-
-
+  }
+  // loadingButton.button('loading');
   processingBtn('#newsLetterForm', '#btnLetterSave', 'loading');
   $.ajaxSetup({
     headers: {
@@ -4191,29 +4128,26 @@ listenSubmit('#newsLetterForm', function (event) {
       displayErrorMessage(result.responseJSON.message);
     },
     complete: function complete() {
-      $('#mc-email').val(''); // loadingButton.button('reset');
-
+      $('#mc-email').val('');
+      // loadingButton.button('reset');
       processingBtn('#newsLetterForm', '#btnLetterSave');
     }
   });
 });
 })();
 
-// This entry need to be wrapped in an IIFE because it need to be isolated against other entry modules.
+// This entry needs to be wrapped in an IIFE because it needs to be isolated against other entry modules.
 (() => {
 /*!**********************************************************!*\
   !*** ./resources/assets/js/web/js/blog/blog_comments.js ***!
   \**********************************************************/
 document.addEventListener('turbo:load', loadFrontBlogComments);
-
 function loadFrontBlogComments() {
   window.scrollTo(0, 0);
 }
-
 listenSubmit('#commentForm', function (event) {
   event.preventDefault();
   processingBtn('#commentForm', '#submitBtn', 'loading');
-
   if ($('.comment-id').val() === '') {
     addComment();
   } else {
@@ -4250,20 +4184,19 @@ listenClick('.delete-comment-btn', function (event) {
         success: function success(result) {
           deletedCommentBtn.closest('.comment-card').remove();
           $('.comment-count').text('');
-
           if ($('.comments').find('.comment-card').length !== 0) {
             $('.comment-count').append('<span>(' + $('.comments').find('.comment-card').length + ')</span>');
           } else {
             postComment();
           }
-
           swal({
             title: Lang.get('messages.common.deleted') + ' !',
             text: Lang.get('messages.post.comment') + Lang.get('messages.common.has_been_deleted'),
             type: 'success',
             confirmButtonColor: '#1967D2',
             timer: 2000
-          }); // location.reload();
+          });
+          // location.reload();
         }
       });
     }
@@ -4288,7 +4221,6 @@ listenClick('.edit-comment-btn', function (event) {
     }
   });
 });
-
 function addComment() {
   $.ajax({
     type: 'POST',
@@ -4300,19 +4232,16 @@ function addComment() {
         //     location.reload();
         // }, 5000);
         var commentCount = $('.comments').find('.comment-card').length + 1;
-
         if ($('.comments').find('.comment-card').length === 0) {
           $('.comment-count').append('(' + commentCount + ')');
         } else {
           $('.comment-count').text('');
           $('.comment-count').append('(' + commentCount + ')');
         }
-
         if (commentCount >= 0) {
           $('.comments').show();
           $('#post-comment').show();
         }
-
         var data = [{
           'image': !isEmpty(result.data.user) ? result.data.user.avatar : $('#defaultBlogImage').val(),
           'commentName': result.data.name,
@@ -4333,7 +4262,6 @@ function addComment() {
     }
   });
 }
-
 function updateComment() {
   var updateId = $('.comment-id').val();
   $.ajax({
@@ -4356,42 +4284,34 @@ function updateComment() {
     }
   });
 }
-
 function postComment() {
   var count = $('.comment-count').text();
   var newCount = count.replace('(', '').replace(')', '');
-
   if (newCount == 0) {
     $('.comments').hide();
     $('#post-comment').hide();
   }
 }
-
 postComment();
 })();
 
-// This entry need to be wrapped in an IIFE because it need to be isolated against other entry modules.
+// This entry needs to be wrapped in an IIFE because it needs to be isolated against other entry modules.
 (() => {
 /*!******************************************************!*\
   !*** ./resources/assets/js/jobs/front/job_search.js ***!
   \******************************************************/
 $(window).scrollTop(0);
 document.addEventListener('turbo:load', loadJobSearchData);
-
 function loadJobSearchData() {
   var salaryFromSlider = $('#salaryFrom');
   var salaryToSlider = $('#salaryTo');
-
   if (!$('#salaryFrom').length && !$('#salaryTo').length) {
     return;
   }
-
   var jobExperienceSlider = $('#jobExperience');
-
   if (!salaryFromSlider.length && !salaryToSlider.length && !jobExperienceSlider.length) {
     return;
   }
-
   $('#searchCategories').select2();
   $('#searchSkill').select2();
   $('#searchGender').select2();
@@ -4403,7 +4323,6 @@ function loadJobSearchData() {
     $('input:checkbox[name=job-type]:checked').each(function () {
       jobType.push($(this).val());
     });
-
     if (jobType.length > 0) {
       window.livewire.emit('changeFilter', 'types', jobType);
     } else {
@@ -4411,14 +4330,11 @@ function loadJobSearchData() {
     }
   });
   $('input[name=job-type]').prop('checked', false);
-
   if ($('#jobExperience').length) {
     var rangEle = $('#jobExperience').siblings()[1];
-
     if (typeof rangEle !== "undefined") {
       rangEle.remove();
     }
-
     $('#jobExperience').ionRangeSlider({
       type: 'single',
       min: 0,
@@ -4430,20 +4346,17 @@ function loadJobSearchData() {
       }
     });
     $('#jobExperience').addClass('irs-hidden-input');
-  } // $("#salaryFrom").ionRangeSlider({
+  }
+  // $("#salaryFrom").ionRangeSlider({
   //     min: 0,
   //     max: 150000,
   //     from: 0,
   // });
-
-
   if (salaryFromSlider.length) {
     var rangEle = $('#salaryFrom').siblings()[1];
-
     if (typeof rangEle !== "undefined") {
       rangEle.remove();
     }
-
     $("#salaryFrom").ionRangeSlider({
       type: 'single',
       min: 0,
@@ -4456,14 +4369,11 @@ function loadJobSearchData() {
     });
     $('#salaryFrom').addClass('irs-hidden-input');
   }
-
   if (salaryToSlider.length) {
     var rangEle = salaryToSlider.siblings()[1];
-
     if (typeof rangEle !== "undefined") {
       rangEle.remove();
     }
-
     salaryToSlider.ionRangeSlider({
       type: 'single',
       min: 0,
@@ -4476,7 +4386,6 @@ function loadJobSearchData() {
     });
     salaryToSlider.addClass('irs-hidden-input');
   }
-
   $('#searchCategories').on('change', function () {
     window.livewire.emit('changeFilter', 'category', $(this).val());
   });
@@ -4494,20 +4403,19 @@ function loadJobSearchData() {
   });
   $('#searchByLocation').on('keyup', function () {
     window.livewire.emit('changeFilter', 'searchByLocation', $(this).val());
-  }); // $('#searchByLocation').on('click', function () {
+  });
+  // $('#searchByLocation').on('click', function () {
   //     window.livewire.emit('resetFilter');
   // });
-
   if (input.location != '') {
     $('#searchByLocation').val(input.location);
     window.livewire.emit('changeFilter', 'searchByLocation', input.location);
   }
-
   if (input.keywords != '') {
     window.livewire.emit('changeFilter', 'title', input.keywords);
-  } // $(document).on('change', '.jobType',function () {
+  }
 
-
+  // $(document).on('change', '.jobType',function () {
   $(document).on('click', '.reset-filter', function () {
     window.livewire.emit('resetFilter');
     salaryFromSlider.data('ionRangeSlider').update({
@@ -4530,7 +4438,6 @@ function loadJobSearchData() {
     $("#searchCategories").val('').trigger("change");
     $('.jobType').prop('checked', false);
   });
-
   if ($(window).width() > 991) {
     $('#search-jobs-filter').show();
     $('#collapseBtn').hide();
@@ -4541,7 +4448,6 @@ function loadJobSearchData() {
     });
   }
 }
-
 document.addEventListener('livewire:load', function () {
   window.livewire.hook('message.processed', function () {
     $(window).scrollTop(0);
@@ -4553,13 +4459,12 @@ document.addEventListener('livewire:load', function () {
 });
 })();
 
-// This entry need to be wrapped in an IIFE because it need to be isolated against other entry modules.
+// This entry needs to be wrapped in an IIFE because it needs to be isolated against other entry modules.
 (() => {
 /*!*****************************************************!*\
   !*** ./resources/assets/js/jobs/front/apply_job.js ***!
   \*****************************************************/
 document.addEventListener('turbo:load', loadApplyJobData);
-
 function loadApplyJobData() {
   $('#resumeId').select2();
   listenClick('.save-draft', function (e) {
@@ -4570,7 +4475,6 @@ function loadApplyJobData() {
     e.preventDefault();
     submitForm('#applyJobForm', 'apply', '#applyJobSave', '#draftJobSave', '#g-recaptcha');
   });
-
   window.submitForm = function (formId, applicationType, loadingBtnId, disabledBtnId) {
     processingBtn(formId, loadingBtnId, 'loading');
     $(disabledBtnId).prop('disabled', true);
@@ -4602,18 +4506,16 @@ function loadApplyJobData() {
 }
 })();
 
-// This entry need to be wrapped in an IIFE because it need to be isolated against other entry modules.
+// This entry needs to be wrapped in an IIFE because it needs to be isolated against other entry modules.
 (() => {
 /*!*******************************************************!*\
   !*** ./resources/assets/js/jobs/front/job_details.js ***!
   \*******************************************************/
 document.addEventListener('turbo:load', loadJobDetailsData);
-
 function loadJobDetailsData() {
   if (!$('#removeFromFavorite').length && !$('#addToFavorites').length) {
     return;
   }
-
   var isJobAddedToFavourite = $('#isJobAddedToFavourite').val();
   var removeFromFavorite = $('#removeFromFavorite').val();
   var addToFavorites = $('#addToFavorites').val();
@@ -4632,7 +4534,6 @@ function loadJobDetailsData() {
       },
       success: function success(result) {
         console.log('sd');
-
         if (result.success) {
           $('#favorite').empty();
           result.data ? $('#favorite').html('<i class="fa-solid fa-bookmark text-primary featured"></i>') : $('#favorite').html('<i class="fa-regular fa-bookmark text-primary"></i>');
@@ -4645,7 +4546,6 @@ function loadJobDetailsData() {
     });
   });
 }
-
 listenSubmit('#reportJobAbuse', function (e) {
   e.preventDefault();
   processingBtn('#reportJobAbuse', '#btnReportJobAbuse', 'loading');
@@ -4669,8 +4569,9 @@ listenSubmit('#reportJobAbuse', function (e) {
       processingBtn('#reportJobAbuse', '#btnReportJobAbuse');
     }
   });
-}); // email job to friend
+});
 
+// email job to friend
 listenSubmit('#emailJobToFriend', function (e) {
   e.preventDefault();
   processingBtn('#emailJobToFriend', '#btnSendToFriend', 'loading');
@@ -4702,7 +4603,7 @@ listenHiddenBsModal('#reportJobAbuseModal', function () {
 });
 })();
 
-// This entry need to be wrapped in an IIFE because it need to be isolated against other entry modules.
+// This entry needs to be wrapped in an IIFE because it needs to be isolated against other entry modules.
 (() => {
 /*!******************************************************************!*\
   !*** ./resources/assets/js/candidate/front/candidate-details.js ***!
@@ -4736,22 +4637,19 @@ listenHiddenBsModal('#reportToCandidateModal', function () {
 });
 })();
 
-// This entry need to be wrapped in an IIFE because it need to be isolated against other entry modules.
+// This entry needs to be wrapped in an IIFE because it needs to be isolated against other entry modules.
 (() => {
 /*!****************************************************************!*\
   !*** ./resources/assets/js/companies/front/company-details.js ***!
   \****************************************************************/
 document.addEventListener('turbo:load', loadFrontCompanyDetailsData);
-
 function loadFrontCompanyDetailsData() {
   if (!$('#isCompanyAddedToFavourite').length) {
     return;
   }
-
   var isCompanyAddedToFavourite = $('#isCompanyAddedToFavourite').val();
   var followText = $('#followText').val();
   var unfollowText = $('#unfollowText').val();
-
   if ($('.favouriteText').length) {
     if (isCompanyAddedToFavourite) {
       $('.favouriteIcon').addClass('fa fa-star');
@@ -4761,7 +4659,6 @@ function loadFrontCompanyDetailsData() {
       $('.favouriteText').text(followText);
     }
   }
-
   $('#addToFavourite').on('click', function () {
     var userId = $(this).data('favorite-user-id');
     var companyId = $(this).data('favorite-company_id');
@@ -4784,7 +4681,6 @@ function loadFrontCompanyDetailsData() {
             $('.favouriteIcon').addClass('fa-regular fa-star');
             $('.favouriteText').text(followText);
           }
-
           displaySuccessMessage(result.message);
         }
       },
@@ -4794,10 +4690,9 @@ function loadFrontCompanyDetailsData() {
     });
   });
 }
-
 listenSubmit('#reportToCompany', function (e) {
-  e.preventDefault(); // processingBtn('#reportToCompany', '#btnSave', 'loading');
-
+  e.preventDefault();
+  // processingBtn('#reportToCompany', '#btnSave', 'loading');
   $.ajax({
     url: route('report.to.company'),
     type: 'POST',
@@ -4805,18 +4700,18 @@ listenSubmit('#reportToCompany', function (e) {
     success: function success(result) {
       if (result.success) {
         displaySuccessMessage(result.message);
-        $('#reportToCompanyModal').modal('hide'); // $(".reportToCompanyBtn").attr("style", "pointer-events:none;");
-
+        $('#reportToCompanyModal').modal('hide');
+        // $(".reportToCompanyBtn").attr("style", "pointer-events:none;");
         $(".reportToCompanyBtn").attr('disabled', true);
         $(".reportToCompanyBtn").text(Lang.get('messages.candidate.already_reported'));
       }
     },
     error: function error(result) {
       displayErrorMessage(result.responseJSON.message);
-    } // complete: function () {
+    }
+    // complete: function () {
     //     processingBtn('#reportToCompany', '#btnSave');
     // },
-
   });
 });
 listenHiddenBsModal('#reportToCompanyModal', function () {
@@ -4824,7 +4719,7 @@ listenHiddenBsModal('#reportToCompanyModal', function () {
 });
 })();
 
-// This entry need to be wrapped in an IIFE because it need to be isolated against other entry modules.
+// This entry needs to be wrapped in an IIFE because it needs to be isolated against other entry modules.
 (() => {
 /*!*******************************************************************!*\
   !*** ./resources/assets/js/companies/front/reported_companies.js ***!
@@ -4857,6 +4752,7 @@ listenHiddenBsModal('#reportToCompanyModal', function () {
 //         timer: 2000,
 //     });
 // });
+
 // $(document).on('click', '.view-note', function (event) {
 //     if (ajaxCallIsRunning) {
 //         return;
@@ -4930,7 +4826,8 @@ listenClick('.show-employer-detail-btn', function (event) {
 listenClick('.reported-company-delete-btn', function (event) {
   var reportedCompanyId = $(event.currentTarget).attr('data-id');
   deleteItem(route('delete.reported.company', reportedCompanyId), Lang.get('messages.candidate.reported_employer'));
-}); //     swal({
+});
+//     swal({
 //         title: Lang.get('messages.common.delete') + ' !',
 //         text: Lang.get('messages.common.are_you_sure_want_to_delete') + '"' +
 //             Lang.get('messages.candidate.reported_employer') + '" ?',
@@ -4974,13 +4871,12 @@ listenClick('.reported-company-delete-btn', function (event) {
 // });
 })();
 
-// This entry need to be wrapped in an IIFE because it need to be isolated against other entry modules.
+// This entry needs to be wrapped in an IIFE because it needs to be isolated against other entry modules.
 (() => {
 /*!**********************************************************!*\
   !*** ./resources/assets/js/companies/front/companies.js ***!
   \**********************************************************/
 document.addEventListener('turbo:load', loadFrontCompanyData);
-
 function loadFrontCompanyData() {
   if ($('#industry').length) {
     $('#industry').on('change', function (e) {
@@ -4988,18 +4884,15 @@ function loadFrontCompanyData() {
       window.livewire.emit('changeFilter', 'featured', data);
     });
   }
-
   if ($('#filter_status').length) {
     $('#filter_status').on('change', function (e) {
       var data = $('#filter_status').select2('val');
       window.livewire.emit('changeFilter', 'status', data);
     });
   }
-
   if (!$('#searchByCompany').length) {
     return;
   }
-
   $('#searchByCompany').focus();
   listenChange('.isActive', function (event) {
     var isActiveId = $(event.currentTarget).data('id');
@@ -5009,7 +4902,6 @@ function loadFrontCompanyData() {
     var adminMakeFeaturedId = $(event.currentTarget).data('id');
     makeFeatured(adminMakeFeaturedId);
   });
-
   function makeFeatured(adminMakeFeaturedId) {
     $.ajax({
       url: route('mark-as-featured', adminMakeFeaturedId),
@@ -5027,13 +4919,11 @@ function loadFrontCompanyData() {
       }
     });
   }
-
   ;
   listenClick('.adminUnFeatured', function (event) {
     var adminUnFeaturedId = $(event.currentTarget).data('id');
     makeUnFeatured(adminUnFeaturedId);
   });
-
   function makeUnFeatured(adminUnFeaturedId) {
     $.ajax({
       url: route('mark-as-unfeatured', adminUnFeaturedId),
@@ -5051,7 +4941,6 @@ function loadFrontCompanyData() {
       }
     });
   }
-
   ;
   listenClick('.delete-btn', function (event) {
     var companyId = $(event.currentTarget).attr('data-id');
@@ -5083,7 +4972,6 @@ function loadFrontCompanyData() {
     var companyId = $(event.currentTarget).data('id');
     activeIsFeatured(companyId);
   });
-
   function changeIsActive(isActiveId) {
     $.ajax({
       url: route('change.company.status', isActiveId),
@@ -5100,7 +4988,6 @@ function loadFrontCompanyData() {
       }
     });
   }
-
   ;
   listenChange('.is-email-verified', function (event) {
     if ($(this).is(':checked')) {
@@ -5111,7 +4998,6 @@ function loadFrontCompanyData() {
       return false;
     }
   });
-
   function changeEmailVerified(companyId) {
     $.ajax({
       url: route('company.verified.email', companyId),
@@ -5129,7 +5015,6 @@ function loadFrontCompanyData() {
       }
     });
   }
-
   ;
   listenClick('.send-email-verification', function (event) {
     var companyId = $(event.currentTarget).attr('data-id');
@@ -5150,13 +5035,12 @@ function loadFrontCompanyData() {
 }
 })();
 
-// This entry need to be wrapped in an IIFE because it need to be isolated against other entry modules.
+// This entry needs to be wrapped in an IIFE because it needs to be isolated against other entry modules.
 (() => {
 /*!*********************************************************!*\
   !*** ./resources/assets/js/web/js/custom/web_custom.js ***!
   \*********************************************************/
 document.addEventListener('turbo:load', loadwebCustomData);
-
 function loadwebCustomData() {
   $('.alert').delay(5000).slideUp(300);
   $('#gRecaptchaContainerCompanyRegistration').empty();
@@ -5164,10 +5048,8 @@ function loadwebCustomData() {
     loadCaptchaForCompanyRegistration();
   }, 500);
 }
-
 window.manageFrontAjaxErrors = function (data) {
   var errorDivId = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'editValidationErrorsBox';
-
   if (data.status == 404) {
     iziToast.error({
       title: 'Error!',
@@ -5178,7 +5060,6 @@ window.manageFrontAjaxErrors = function (data) {
     printErrorMessage('#' + errorDivId, data);
   }
 };
-
 window.deleteFrontItem = function (url, tableId, header) {
   var callFunction = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : null;
   var swalWithBootstrapButtons = Swal.mixin({
@@ -5205,7 +5086,6 @@ window.deleteFrontItem = function (url, tableId, header) {
     }
   });
 };
-
 function deleteFrontItemAjax(url, tableId, header) {
   var callFunction = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : null;
   $.ajax({
@@ -5222,7 +5102,6 @@ function deleteFrontItemAjax(url, tableId, header) {
         confirmButtonColor: '#009ef7',
         timer: 2000
       });
-
       if (callFunction) {
         eval(callFunction);
       }
@@ -5238,70 +5117,60 @@ function deleteFrontItemAjax(url, tableId, header) {
     }
   });
 }
-
 window.loadCaptchaForCompanyRegistration = function () {
   var captchaContainer = document.getElementById('gRecaptchaContainerCompanyRegistration');
-
   if (!captchaContainer) {
     return false;
   }
-
   captchaContainer.innerHTML = '';
-  var recaptcha = document.createElement('div'); // setTimeout(function () {
+  var recaptcha = document.createElement('div');
 
+  // setTimeout(function () {
   grecaptcha.render(recaptcha, {
     'sitekey': siteKey,
     'callback': function callback(response) {
       $("#companyRegistrationBtn").attr("disabled", false);
     }
   });
-  captchaContainer.appendChild(recaptcha); // }, 500)
+  captchaContainer.appendChild(recaptcha);
+  // }, 500)
 };
 })();
 
-// This entry need to be wrapped in an IIFE because it need to be isolated against other entry modules.
+// This entry needs to be wrapped in an IIFE because it needs to be isolated against other entry modules.
 (() => {
 /*!**********************************************************!*\
   !*** ./resources/assets/js/custom/input_price_format.js ***!
   \**********************************************************/
 document.addEventListener('turbo:load', loadInputPriceFormat);
-
 function loadInputPriceFormat() {
   if (!$('.price-input').length) {
     return;
   }
-
   priceFormatSelector('.price-input');
 }
-
 window.addCommas = function (nStr) {
   nStr += '';
   var x = nStr.split('.');
   var x1 = x[0];
   var x2 = x.length > 1 ? '.' + x[1] : '';
   var rgx = /(\d+)(\d{3})/;
-
   while (rgx.test(x1)) {
     x1 = x1.replace(rgx, '$1' + ',' + '$2');
   }
-
   return x1 + x2;
 };
-
 window.getFormattedPrice = function (price) {
   if (price != '' || price > 0) {
     if (typeof price !== 'number') {
       price = price.replace(/,/g, '');
     }
-
     return addCommas(price);
   }
 };
-
 window.priceFormatSelector = function (selector) {
   $(document).on('input keyup keydown keypress', selector, function (event) {
     var price = $(this).val();
-
     if (price === '') {
       $(this).val('');
     } else {
@@ -5316,24 +5185,23 @@ window.priceFormatSelector = function (selector) {
 };
 })();
 
-// This entry need to be wrapped in an IIFE because it need to be isolated against other entry modules.
+// This entry needs to be wrapped in an IIFE because it needs to be isolated against other entry modules.
 (() => {
 /*!*****************************************************************!*\
   !*** ./resources/assets/js/custom/phone-number-country-code.js ***!
   \*****************************************************************/
 document.addEventListener('turbo:load', loadPhoneNumberCountry);
 document.addEventListener('turbo:load', loadPhoneNumberCountry);
-
 function loadPhoneNumberCountry() {
   if (!$('#phoneNumber').length && !$('#prefix_code').length) {
     return false;
   }
-
   var input = document.querySelector('#phoneNumber'),
-      errorMsg = document.querySelector('#error-msg'),
-      validMsg = document.querySelector('#valid-msg');
-  var errorMap = [Lang.get('messages.phone.invalid_number'), Lang.get('messages.phone.invalid_country_code'), Lang.get('messages.phone.too_short'), Lang.get('messages.phone.too_long'), Lang.get('messages.phone.invalid_number')]; // initialise plugin
+    errorMsg = document.querySelector('#error-msg'),
+    validMsg = document.querySelector('#valid-msg');
+  var errorMap = [Lang.get('messages.phone.invalid_number'), Lang.get('messages.phone.invalid_country_code'), Lang.get('messages.phone.too_short'), Lang.get('messages.phone.too_long'), Lang.get('messages.phone.invalid_number')];
 
+  // initialise plugin
   var intl = window.intlTelInput(input, {
     initialCountry: defaultCountryCodeValue,
     separateDialCode: true,
@@ -5345,31 +5213,28 @@ function loadPhoneNumberCountry() {
     },
     utilsScript: '../../public/assets/js/inttel/js/utils.min.js'
   });
-
   if (typeof phoneNo != 'undefined' && phoneNo !== '') {
     setTimeout(function () {
       $('#phoneNumber').trigger('change');
     }, 500);
-  } // if (isEdit) {
+  }
 
-
+  // if (isEdit) {
   var getCode = intl.selectedCountryData['dialCode'];
-  $('#prefix_code').val(getCode); // }
+  $('#prefix_code').val(getCode);
+  // }
 
   var getPhoneNumber = $('#phoneNumber').val();
   var removeSpacePhoneNumber = getPhoneNumber.replace(/\s/g, '');
   $('#phoneNumber').val(removeSpacePhoneNumber);
-
   var reset = function reset() {
     input.classList.remove('error');
     errorMsg.innerHTML = '';
     errorMsg.classList.add('d-none');
     validMsg.classList.add('d-none');
   };
-
   input.addEventListener('blur', function () {
     reset();
-
     if (input.value.trim()) {
       if (intl.isValidNumber()) {
         validMsg.classList.remove('d-none');
@@ -5380,11 +5245,11 @@ function loadPhoneNumberCountry() {
         errorMsg.classList.remove('d-none');
       }
     }
-  }); // on keyup / change flag: reset
+  });
 
+  // on keyup / change flag: reset
   input.addEventListener('change', reset);
   input.addEventListener('keyup', reset);
-
   if (typeof phoneNo != 'undefined' && phoneNo !== '') {
     setTimeout(function () {
       $('#phoneNumber').trigger('change');
@@ -5392,7 +5257,6 @@ function loadPhoneNumberCountry() {
   } else {
     var flagClassLocal = window.localStorage.getItem('flagClassLocal');
     var dialCodeValLocal = window.localStorage.getItem('dialCodeValLocal');
-
     if (dialCodeValLocal) {
       $('.iti__selected-flag>.iti__flag').addClass(flagClassLocal);
       $('.iti__selected-dial-code').text(dialCodeValLocal);
@@ -5400,13 +5264,11 @@ function loadPhoneNumberCountry() {
       intl.setNumber(dialCodeValLocal + phoneEleVal);
     }
   }
-
   $('#phoneNumber').on('blur keyup change countrychange', function () {
     if (typeof phoneNo != 'undefined' && phoneNo !== '') {
       intl.setNumber('+' + phoneNo);
       phoneNo = '';
     }
-
     var getCode = intl.selectedCountryData['dialCode'];
     $('#prefix_code').val(getCode);
   });

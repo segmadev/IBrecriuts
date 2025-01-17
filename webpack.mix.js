@@ -258,3 +258,12 @@ mix.copy('node_modules/@fortawesome/fontawesome-free/css/all.min.css',
 mix.js('resources/assets/js/custom/custom.js',
     'public/assets/js/custom/custom.js');
 
+    mix.webpackConfig({
+        resolve: {
+            fallback: {
+                fs: require.resolve('browserify-fs'), // Provide a browser-compatible polyfill for `fs`
+            },
+        },
+    });
+    
+    
